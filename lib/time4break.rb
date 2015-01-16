@@ -1,5 +1,17 @@
 require "time4break/version"
 
-module Time4break
-  # Your code goes here...
+class Time4Break
+
+  def woken
+    `echo $(sysctl -a |grep waketime)`.split[-2]
+  end
+
+  def working_time
+    Time.now - Time.parse(woken) 
+  end
+
+  def break_time
+    working_time > 3600
+  end
 end
+
