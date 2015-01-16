@@ -10,8 +10,13 @@ class Time4Break
     Time.now - Time.parse(woken) 
   end
 
-  def break_time
+  def need_some_rest?
     working_time > 3600
   end
+
+  def break_time
+    "Please, leave your laptop alone for at least 5 minutes!" if need_some_rest?
+  end
+
 end
 
