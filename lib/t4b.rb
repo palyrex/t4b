@@ -6,7 +6,7 @@ require 'time'
 class Time4Break
 
   def self.woken
-    `echo $(sysctl -a |grep waketime)`.split[-2]
+    `echo $(sysctl -a | grep waketime)`.split[-2]
   end
 
   def self.working_time

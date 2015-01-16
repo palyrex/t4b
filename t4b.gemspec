@@ -8,14 +8,11 @@ Gem::Specification.new do |spec|
   spec.version       = Time4Break::VERSION
   spec.authors       = ["Pavel Redics"]
   spec.email         = ["pavel.redics@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
+  spec.summary       = "This gem will tell you about break"
+  spec.description   = "Run in terminal to see if you need a break or not"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\n")
-  # spec.files         = `git ls-files -z`.split("\x0")
-  # spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
   spec.executables   << 't4b'
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
