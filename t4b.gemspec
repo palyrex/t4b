@@ -12,9 +12,11 @@ Gem::Specification.new do |spec|
   spec.description   = "Run in terminal to see if you need a break or not"
   spec.license       = "MIT"
 
-  spec.files         = `git ls-files -z`.split("\n")
-  spec.executables   << 't4b'
-  spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
+  # spec.files         = `git ls-files -z`.split("\n")
+  spec.files.grep(%r{^bin/}) { |f| f[3..-1] }
+  spec.executables   = []
+  # spec.executables   << 't4b'
+  # spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
   spec.add_development_dependency "bundler", "~> 1.7"
