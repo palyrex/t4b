@@ -10,7 +10,7 @@ class Time4Break
   end
 
   def self.working_time
-    Time.now - Time.parse(woken) 
+    (Time.now - Time.parse(woken)).abs
   end
 
   def self.need_some_rest?
