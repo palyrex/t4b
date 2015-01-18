@@ -16,11 +16,13 @@ describe Time4Break do
 
     context "mandatory break" do 
       it "if current working time is more than 1 hour" do 
-        expect(t4b.need_some_rest?).to be false # true # test will fail or not depending how long your laptop working
-      end
+        # expect(t4b.need_some_rest?).to be false # test will fail or not depending how long your laptop working
+        expect(t4b.need_some_rest?).to be true
+      end 
 
       it "show message if break needed" do
-        expect(t4b.t4b).to eq "Carry on working" # "Please, leave your laptop alone for at least 5 minutes!" # test will fail or not depending how long your laptop working
+        # expect(t4b.t4b).to eq "Carry on working" 
+        expect(t4b.t4b).to eq "Please, leave your laptop alone for at least 5 minutes!" # test will fail or not depending how long your laptop working
       end
     end
 end

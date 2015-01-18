@@ -1,6 +1,3 @@
-# !/usr/bin/env ruby
-
-require "t4b/version"
 require 'time'
 
 class Time4Break
